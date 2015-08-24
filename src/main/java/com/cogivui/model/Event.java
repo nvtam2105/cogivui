@@ -193,6 +193,15 @@ public class Event extends BaseEntity {
 		this.source = source;
 	}
 
+	@Column(name = "ORIGINAL_URL")
+	public String getOriginalUrl() {
+		return originalUrl;
+	}
+
+	public void setOriginalUrl(String originalUrl) {
+		this.originalUrl = originalUrl;
+	}
+
 	public static Event clone(EventDto eventDto) {
 		Event e = new Event();
 		e.setName(eventDto.getName());
@@ -205,20 +214,12 @@ public class Event extends BaseEntity {
 		e.setPrice(eventDto.getPrice());
 		e.setSource(eventDto.getSource());
 		e.setStatus(eventDto.getStatus());
+		e.setOriginalUrl(eventDto.getOriginalUrl());
 		e.setOrganizerContact(eventDto.getOrganizerContact());
 
 		e.setCategories(eventDto.getCategories());
 		e.setTags(eventDto.getTags());
 
 		return e;
-	}
-
-	@Column(name = "ORIGINAL_URL")
-	public String getOriginalUrl() {
-		return originalUrl;
-	}
-
-	public void setOriginalUrl(String originalUrl) {
-		this.originalUrl = originalUrl;
 	}
 }

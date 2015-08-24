@@ -34,6 +34,8 @@ public class EventDto implements Serializable {
 
 	private int status;
 
+	private String originalUrl;
+
 	public String getName() {
 		return name;
 	}
@@ -136,6 +138,13 @@ public class EventDto implements Serializable {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+	public String getOriginalUrl() {
+		return originalUrl;
+	}
+
+	public void setOriginalUrl(String originalUrl) {
+		this.originalUrl = originalUrl;
 	}
 
 }
