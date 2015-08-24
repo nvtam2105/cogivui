@@ -207,7 +207,7 @@
 
 <h3>Event List</h3>
 <div class="alert alert-info" ng-show="events.length == 0">No events found</div>
-<table class="table table-bordered table-striped table-hover" ng-show="events.length > 0">
+<table id="eventList" class="table table-bordered table-striped table-hover " ng-show="events.length > 0">
     <thead>
         <tr>
             <th style="text-align: center; width: 25px;">Id</th>
@@ -234,3 +234,12 @@
         </tr>
     </tbody>
 </table>
+<script>
+	$(document).ready(function() {
+		$('#eventList').DataTable({
+			"scrollY" : "500px",
+			"scrollCollapse" : false,
+			"paging" : false
+		});
+	});
+</script>

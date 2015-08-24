@@ -138,6 +138,7 @@ var EventController = function($scope, $http) {
         $scope.event = event;
         $scope.event.time.startDate = $scope.formatDate($scope.event.time.startDate);
         $scope.event.time.endDate = $scope.formatDate($scope.event.time.endDate);
+        
         $scope.editMode = true;
         $scope.showModalAddEvent = !$scope.showModalAddEvent;
     };
