@@ -10,6 +10,9 @@ var EventController = function($scope, $http) {
 	$scope.event = {};
 	$scope.event.time={};
 	$scope.event.place ={};
+	$scope.event.place.cityId = 1;
+	$scope.event.status = 0;
+	
 	$scope.event.categories =[];
 	$scope.event.tags=[];
 	
@@ -24,13 +27,6 @@ var EventController = function($scope, $http) {
 		$scope.mins.push(i);
 	}
 	
-	/*
-	 * $scope.categories = [ {id: 1, name: 'Ca Nhac'}, {id: 2, name: 'Bar'},
-	 * {id: 3, name: 'Phong Tra & Ca Phe'}, {id: 4, name: 'Am thuc'}, {id: 5,
-	 * name: 'Phim anh'}, {id: 6, name: 'Nghe Thuat'}, {id: 7, name: 'Hoi
-	 * nghi'}, {id: 8, name: 'Dao Tao'}, {id: 9, name: 'Xa Hoi'} ];
-	 * 
-	 */
 	$scope.getCategories = function() {
         $http.get('category/list').success(function(categories){
             $scope.categories = categories;
@@ -87,7 +83,6 @@ var EventController = function($scope, $http) {
         $scope.resetError();
         delete event.id;
         delete event.distance;
-        console.log(event);
         $http.post('event/create', event).success(function() {
         	$scope.resetEventForm();
             $scope.getEventList();
@@ -107,7 +102,6 @@ var EventController = function($scope, $http) {
 							        	headers: { 'Content-Type': undefined }})
 		.success(function(data, status) {
 			$scope.event.poster = data.message;
-			console.log("aaaaaaa=" + data);
 	        alert("Success ... " + status);
         }).error(function(data, status) {
             alert("Error ... " + status);
@@ -125,7 +119,6 @@ var EventController = function($scope, $http) {
 							        	headers: { 'Content-Type': undefined }})
 		.success(function(data, status) {
 			$scope.event.poster = data.message;
-			console.log("aaaaaaa=" + data);
 	        alert("Success ... " + status);
         }).error(function(data, status) {
             alert("Error ... " + status);
@@ -166,13 +159,12 @@ var EventController = function($scope, $http) {
         }).error(function() {
             $scope.setError('Could not remove event');
         });
-        // $scope.event.name = '';
-        // $scope.event.speed = '';
     };
 
     $scope.resetEventForm = function() {
         $scope.resetError();
         $scope.event = {};
+        $scope.place = {};
         $scope.editMode = false;
     };
 
@@ -195,7 +187,7 @@ var EventController = function($scope, $http) {
     $scope.showModalAddEvent = false;
     $scope.toggleModalAddEvent = function(){
         $scope.showModalAddEvent = !$scope.showModalAddEvent;
-        
+        $scope.resetEventForm();
         $("#inputStartDate").datepicker({
             dateFormat : "yy-mm-dd"
         }).val()
