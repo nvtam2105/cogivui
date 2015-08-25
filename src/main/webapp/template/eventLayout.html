@@ -1,20 +1,30 @@
-<button ng-click="toggleModalUploadFileEvent()" class="btn btn-info">Upload File Event</button>
-<button ng-click="toggleModalAddEvent()" class="btn btn-info">Add Event</button>
-
-<modal title="Upload File Event" visible="showModalUploadFileEvent">
+<!-- <modal title="Upload File Event" visible="showModalUploadFileEvent">
 <div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
 <form class="form-horizontal" role="form" enctype="multipart/form-data">
     <div class="form-group">
-        <label class="control-label col-sm-2" for="poster">Update File</label>
+        <label class="control-label col-sm-2">Update File</label>
+        <div class="col-sm-10">
+            <input type="file" file-model="myFile1" />
+            <button type="button" class="btn btn-primary" ng-click="uploadFileEvent()">Upload File</button>
+        </div>
+    </div>
+</form>
+</modal> -->
+
+<!-- <button ng-click="toggleModalUploadFileEvent()" class="btn btn-info">Upload File Event</button> -->
+
+<div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
+<form class="form-horizontal" role="form" enctype="multipart/form-data">
+    <div class="form-group">
+        <label class="control-label col-sm-2">Update File</label>
         <div class="col-sm-10">
             <input type="file" file-model="myFile" />
             <button type="button" class="btn btn-primary" ng-click="uploadFileEvent()">Upload File</button>
         </div>
     </div>
 </form>
-</modal>
 
-
+<button ng-click="toggleModalAddEvent()" class="btn btn-info">Add Event</button>
 <modal title="Add/Edit Event" visible="showModalAddEvent">
 <div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
 <form class="form-horizontal" role="form" enctype="multipart/form-data">

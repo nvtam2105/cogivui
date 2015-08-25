@@ -30,7 +30,7 @@ public class EventDto implements Serializable {
 
 	private String hotline;
 
-	private String source;
+	private String posterUrl;
 
 	private int status;
 
@@ -124,14 +124,6 @@ public class EventDto implements Serializable {
 		this.hotline = hotline;
 	}
 
-	public String getSource() {
-		return source;
-	}
-
-	public void setSource(String source) {
-		this.source = source;
-	}
-
 	public int getStatus() {
 		return status;
 	}
@@ -146,5 +138,13 @@ public class EventDto implements Serializable {
 	public void setOriginalUrl(String originalUrl) {
 		this.originalUrl = originalUrl;
 	}
+
+	public String getPosterUrl() {
+	    return posterUrl;
+        }
+
+	public void setPosterUrl(String posterUrl) {
+	    this.posterUrl = posterUrl;
+        }
 
 }

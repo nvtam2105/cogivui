@@ -56,7 +56,7 @@ public class Event extends BaseEntity {
 
 	private long distance;
 
-	private String source;
+	private String posterUrl;
 
 	private String originalUrl;
 
@@ -183,16 +183,16 @@ public class Event extends BaseEntity {
 	public void setStatus(int status) {
 		this.status = status;
 	}
+	
+	@Column(name = "POSTER_URL")
+	public String getPosterUrl() {
+	    return posterUrl;
+        }
 
-	@Column(name = "SOURCE")
-	public String getSource() {
-		return source;
-	}
-
-	public void setSource(String source) {
-		this.source = source;
-	}
-
+	public void setPosterUrl(String posterUrl) {
+	    this.posterUrl = posterUrl;
+        }
+	
 	@Column(name = "ORIGINAL_URL")
 	public String getOriginalUrl() {
 		return originalUrl;
@@ -212,7 +212,7 @@ public class Event extends BaseEntity {
 		e.setPoster(eventDto.getPoster());
 		e.setPlace(eventDto.getPlace());
 		e.setPrice(eventDto.getPrice());
-		e.setSource(eventDto.getSource());
+		e.setPosterUrl(eventDto.getPosterUrl());
 		e.setStatus(eventDto.getStatus());
 		e.setOriginalUrl(eventDto.getOriginalUrl());
 		e.setOrganizerContact(eventDto.getOrganizerContact());
@@ -222,4 +222,6 @@ public class Event extends BaseEntity {
 
 		return e;
 	}
+
+	
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -14,6 +15,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -30,7 +32,7 @@ import com.cogivui.criteria.EventCriteria;
 import com.cogivui.message.Status;
 import com.cogivui.model.Event;
 import com.cogivui.model.EventDto;
-import com.cogivui.model.OrganizerContact;
+import com.cogivui.model.PeriodTime;
 import com.cogivui.model.Place;
 import com.cogivui.model.Time;
 import com.cogivui.service.EventService;
@@ -365,8 +367,9 @@ public class EventRestController {
 		String name = file.getOriginalFilename();
 		if (!file.isEmpty()) {
 			List<Event> list = new ArrayList<Event>();
-			String[] FILE_HEADER_MAPPING = { "page", "page-href", "event", "event-href", "Title", "Date_Time", "Venue", "description",
-			        "image-src", "source_link" };
+			// select_event	select_event-href	name	time	address	longlat	venue	desc_full	desc_short	image_url	page click	page click-href
+			String[] FILE_HEADER_MAPPING = { "select_event", "select_event-href", "name", "time", "address", "longlat", "venue", "desc_full",
+			        "desc_short", "image_url", "page click-href" };
 			CSVParser csvFileParser = null;
 			Reader fileReader = null;
 			CSVFormat csvFileFormat = CSVFormat.DEFAULT.withHeader(FILE_HEADER_MAPPING);
@@ -378,16 +381,32 @@ public class EventRestController {
 					CSVRecord record = csvRecords.get(i);
 					Event event = new Event();
 					event.setName(record.get("name"));
-					event.setHotline(record.get("hotline"));
-					event.setVenueName(record.get("venueName"));
-					event.setTime(new Time(record.get("time")));
-					event.setDescription(ControllerUtils.br2nl(record.get("description")));
-					event.setPlace(new Place());
-					event.setPrice(Float.valueOf(record.get("price")));
-					event.setSource(record.get("source"));
-					event.setOriginalUrl(record.get("original_url"));
+					//event.setHotline(record.get("hotline"));
+					event.setVenueName(record.get("venue"));
+					//event.setTime(new Time(record.get("time")));
+					Time time = new Time();
+					time.setStartDate(new Date());
+					time.setEndDate(new Date());
+					time.setStartPeriod(PeriodTime.AM);
+					time.setEndPeriod(PeriodTime.PM);
+					event.setTime(time);
+
+					String des = StringUtils.isBlank(record.get("desc_full")) ? ControllerUtils.br2nl(record.get("desc_full").trim()) : StringUtils.trim(record.get("desc_short"));
+					event.setDescription(des);
+					
+					Place place = new Place();
+					String[] longla = StringUtils.trim(record.get("longlat")).split(",");
+					place.setLatitude(longla[0]);
+					place.setLongitude(longla[1]);
+					place.setCityId(1);
+					place.setAddress(StringUtils.trim(record.get("address")));
+					event.setPlace(place);
+					
+					//event.setPrice(Float.valueOf(record.get("price")));
+					event.setPosterUrl(record.get("image_url"));
+					event.setOriginalUrl(record.get("select_event-href"));
 					event.setStatus(0);
-					event.setOrganizerContact(new OrganizerContact());
+					//event.setOrganizerContact(new OrganizerContact());
 					
 					// city ==> send long, lat to Google ==> extract
 					// category, hotline, price, time
