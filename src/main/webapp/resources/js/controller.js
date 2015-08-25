@@ -5,7 +5,7 @@
  * 
  * @constructor
  */
-var EventController = function($scope, $http) {
+var EventController = function($scope, $http, $filter, ngTableParams) {
 	
 	$scope.event = {};
 	$scope.event.time={};
@@ -17,6 +17,9 @@ var EventController = function($scope, $http) {
 	$scope.event.tags=[];
 	
 	$scope.eventEditId = '';
+	$scope.events = {};
+    $scope.editMode = false;
+    $scope.predicate = 'id';
 	
 	$scope.hours = [];
 	for(var i=0;i<13;i++) {
@@ -35,7 +38,7 @@ var EventController = function($scope, $http) {
 
 	$scope.placeChanged = function() {
         $scope.place = this.getPlace();
-        console.log($scope.place);
+        // console.log($scope.place);
         
         $scope.event.place.address= $scope.place.formatted_address;
         // $scope.event.place.name= $scope.place.formatted_address;
@@ -45,18 +48,30 @@ var EventController = function($scope, $http) {
         // console.log($scope.event);
     }
 	
-	$scope.events = {};
-    $scope.editMode = false;
 
     $scope.getEventList = function() {
-        $http.get('event/list').success(function(events){
-            $scope.events = events;
+        $http.get('event/list').success(function(data){
+    	 $scope.tableParams = new ngTableParams({
+    	        page: 1,            // show first page
+    	        count: 10 ,          // count per page
+    	        sorting: {
+    	            id: 'desc'     // initial sorting
+    	        }
+    	    }, {
+    	        total: data.length, // length of data
+    	        getData: function ($defer, params) {
+    	        	var orderedData = params.sorting() ? $filter('orderBy')(data, params.orderBy()) : data;
+    	        	$scope.events = orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
+    	        	$defer.resolve($scope.events);
+    	        }
+    	    })
+        	 
         });
     };
-
+    
     $scope.addEvent = function(event) {
         $scope.resetError();
-        console.log(event);
+        // console.log(event);
         $http.post('event/create', event).success(function() {
         	$scope.resetEventForm();
             $scope.getEventList();
@@ -94,7 +109,7 @@ var EventController = function($scope, $http) {
     $scope.uploadPoster=function () {
     	var file = $scope.myFile;
     	// file.name = "event_" + new Date().getTime();
-    	console.log(file);
+    	// console.log(file);
     	var formData = new FormData();
 	    formData.append("file",file	);
 	    $http.post('event/uploadPoster', formData, {
@@ -111,7 +126,7 @@ var EventController = function($scope, $http) {
     
     $scope.uploadFileEvent=function () {
     	var file = $scope.myFile;
-    	console.log(file);
+    	// console.log(file);
     	var formData = new FormData();
 	    formData.append("file",file	);
 	    $http.post('event/uploadFileEvent', formData, {
@@ -182,8 +197,6 @@ var EventController = function($scope, $http) {
     
     $scope.getCategories();
 
-    $scope.predicate = 'id';
-    
     $scope.showModalAddEvent = false;
     $scope.toggleModalAddEvent = function(){
         $scope.showModalAddEvent = !$scope.showModalAddEvent;
