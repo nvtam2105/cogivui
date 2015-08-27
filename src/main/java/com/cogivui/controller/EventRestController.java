@@ -51,6 +51,12 @@ import com.cogivui.utils.MapUtils;
 public class EventRestController {
 
     static final Logger logger = Logger.getLogger(EventRestController.class);
+    
+    final String CHARSET_UTF8 = "UTF-8";
+    
+    final String HO_CHI_MINH = "H%E1%BB%93+Ch%C3%AD+Minh";
+    final String HANOI = "H%C3%A0+N%E1%BB%99i";
+    final String DA_NANG = "%C4%90%C3%A0+N%E1%BA%B5ng";
 
     @Autowired
     ServletContext context;
@@ -79,7 +85,7 @@ public class EventRestController {
 	    Event event = Event.clone(eventDto);
 	    event.setId(id);
 	    eventService.saveOrUpdate(event);
-	    System.out.println("delete category, tags and update again");
+//	    System.out.println("delete category, tags and update again");
 	    return new Status(1, "Event updated successfully !");
 	} catch (Exception e) {
 	    return new Status(0, e.toString());
@@ -350,7 +356,7 @@ public class EventRestController {
     public @ResponseBody
     Status uploadPoster(@RequestParam(value = "file") MultipartFile file) {
 	String name = file.getOriginalFilename();
-	System.out.println(name);
+//	System.out.println(name);
 	if (!file.isEmpty()) {
 	    try {
 
@@ -374,15 +380,13 @@ public class EventRestController {
 	String name = file.getOriginalFilename();
 	if (!file.isEmpty()) {
 	    List<Event> list = new ArrayList<Event>();
-	    // select_event select_event-href name time address longlat venue
-	    // desc_full desc_short image_url page click page click-href
 	    String[] FILE_HEADER_MAPPING = { "select_event", "select_event-href", "name", "time", "address", "latlong", "venue",
 		    "desc_full", "desc_short", "image_url", "page click-href" };
 	    CSVParser csvFileParser = null;
 	    Reader fileReader = null;
 	    CSVFormat csvFileFormat = CSVFormat.DEFAULT.withHeader(FILE_HEADER_MAPPING);
 	    try {
-		fileReader = new InputStreamReader(file.getInputStream(), "UTF-8");
+		fileReader = new InputStreamReader(file.getInputStream(), CHARSET_UTF8);
 		csvFileParser = new CSVParser(fileReader, csvFileFormat);
 		List<CSVRecord> csvRecords = csvFileParser.getRecords();
 		for (int i = 1; i < csvRecords.size(); i++) {
@@ -403,7 +407,11 @@ public class EventRestController {
 				if (dateTimeHourMin.length > 1) {
 				    String[] hoursMin = StringUtils.split(StringUtils.trim(dateTimeHourMin[1]), ":");
 				    if (hoursMin.length > 1) {
-					time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					if (Integer.valueOf(hoursMin[0]) > 12) {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]) - 12);
+					} else {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					}
 					time.setMinStartDate(Integer.valueOf(hoursMin[1]));
 					if (Integer.valueOf(hoursMin[0]) >= 12) {
 					    time.setStartPeriod(PeriodTime.PM);
@@ -422,7 +430,11 @@ public class EventRestController {
 				if (dateTimeHourMin.length > 1) {
 				    String[] hoursMin = StringUtils.split(StringUtils.trim(dateTimeHourMin[1]), ":");
 				    if (hoursMin.length > 1) {
-					time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					if (Integer.valueOf(hoursMin[0]) > 12) {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]) - 12);
+					} else {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					}
 					time.setMinStartDate(Integer.valueOf(hoursMin[1]));
 					if (Integer.valueOf(hoursMin[0]) >= 12) {
 					    time.setStartPeriod(PeriodTime.PM);
@@ -449,7 +461,11 @@ public class EventRestController {
 				if (dateTimeHourMin.length > 2) {
 				    String[] hoursMin = StringUtils.split(StringUtils.trim(dateTimeHourMin[2]), ":");
 				    if (hoursMin.length > 1) {
-					time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					if (Integer.valueOf(hoursMin[0]) > 12) {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]) - 12);
+					} else {
+					    time.setHourStartDate(Integer.valueOf(hoursMin[0]));
+					}
 					time.setMinStartDate(Integer.valueOf(hoursMin[1]));
 					if (Integer.valueOf(hoursMin[0]) >= 12) {
 					    time.setStartPeriod(PeriodTime.PM);
@@ -489,11 +505,11 @@ public class EventRestController {
 			    System.out.println(e.getMessage());
 			}
 
-			if (place.getAddress().contains(URLDecoder.decode("H%E1%BB%93+Ch%C3%AD+Minh", "UTF-8"))) {
+			if (place.getAddress().contains(URLDecoder.decode(HO_CHI_MINH, CHARSET_UTF8))) {
 			    place.setCityId(1); // HCM
-			} else if (place.getAddress().contains(URLDecoder.decode("H%C3%A0+N%E1%BB%99i", "UTF-8"))) {
+			} else if (place.getAddress().contains(URLDecoder.decode(HANOI, CHARSET_UTF8))) {
 			    place.setCityId(2);// HN
-			} else if (place.getAddress().contains(URLDecoder.decode("%C4%90%C3%A0+N%E1%BA%B5ng", "UTF-8"))) {
+			} else if (place.getAddress().contains(URLDecoder.decode(DA_NANG, CHARSET_UTF8))) {
 			    place.setCityId(3);// DN
 			} else {
 			    place.setCityId(0);// None
@@ -510,9 +526,9 @@ public class EventRestController {
 		    // city ==> send long, lat to Google ==> extract
 		    // category, hotline, price, time
 		    list.add(event);
-		    System.out.println(record);
+		    //System.out.println(record);
 		}
-		eventService.saveOrUpdate(list);
+		eventService.saveNewEvents(list);
 		return new Status(1, "Event was inputted successfully");
 	    } catch (Exception e) {
 		return new Status(0, "You failed to upload " + name + " => " + e.getMessage());

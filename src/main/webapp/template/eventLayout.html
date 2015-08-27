@@ -282,7 +282,7 @@
 			<td sortable="'name'" data-title="'Name'">{{event.name}}</td>
 			<td sortable="'address'" data-title="'Address'">{{event.place.address}}</td>
 			<td sortable="'hotline'" data-title="'Hotline'">{{event.hotline}}</td>
-			<td sortable="'description'" data-title="'Description'">{{event.description}}</td>
+			<td sortable="'description'" data-title="'Description'">{{event.description.substr(0,50)}}</td>
 			<td sortable="'status'" data-title="'Status'">{{event.status == '1' ? 'APPROVED' : 'NOT APPROVED'}}</td>
 			<td style="width: 200px; text-align: center;">
 				<button class="btn btn-mini btn-danger"
