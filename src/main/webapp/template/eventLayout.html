@@ -281,6 +281,7 @@
 			<td sortable="'id'" data-title="'ID'">{{event.id}}</td>
 			<td sortable="'name'" data-title="'Name'">{{event.name}}</td>
 			<td sortable="'address'" data-title="'Address'">{{event.place.address}}</td>
+            <td sortable="'startDate'" data-title="'Start Date'">{{event.time.startDate | date:'dd-MM-yyyy' }}</td>
 			<td sortable="'hotline'" data-title="'Hotline'">{{event.hotline}}</td>
 			<td sortable="'description'" data-title="'Description'">{{event.description.substr(0,50)}}</td>
 			<td sortable="'status'" data-title="'Status'">{{event.status == '1' ? 'APPROVED' : 'NOT APPROVED'}}</td>

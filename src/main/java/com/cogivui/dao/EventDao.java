@@ -81,7 +81,7 @@ public class EventDao extends GenericDao<Event> {
 	Date tomorrow = DateUtils.addDays(today, 1);
 
 	criteria.add(Restrictions.or(
-	        DaoUtils.greaterThanIgnoreTime("time.startDate", today),
+	        DaoUtils.equalsOrGreaterThanIgnoreTime("time.startDate", today),
 	        Restrictions.and(DaoUtils.equalsOrLessThanIgnoreTime("time.startDate", tomorrow),
 	                DaoUtils.equalsOrGreaterThanIgnoreTime("time.endDate", tomorrow))));
 
@@ -127,7 +127,7 @@ public class EventDao extends GenericDao<Event> {
 	Date today = new Date();
 
 	criteria.add(DaoUtils.equalsOrLessThanIgnoreTime("time.startDate", today));
-	criteria.add(DaoUtils.equalOrGreaterThan("time.endDate", today));
+	criteria.add(DaoUtils.equalsOrGreaterThanIgnoreTime("time.endDate", today));
 	criteria.addOrder(Order.asc("time.startDate"));
 	if (eventCriteria.getCategoryId() > 0) {
 	    criteria.add(Restrictions.eq("categories.id", eventCriteria.getCategoryId()));
@@ -169,7 +169,7 @@ public class EventDao extends GenericDao<Event> {
 	Date tomorrow = DateUtils.addDays(new Date(), 1);
 
 	criteria.add(DaoUtils.equalsOrLessThanIgnoreTime("time.startDate", tomorrow));
-	criteria.add(DaoUtils.equalOrGreaterThan("time.endDate", tomorrow));
+	criteria.add(DaoUtils.equalsOrGreaterThanIgnoreTime("time.endDate", tomorrow));
 	criteria.addOrder(Order.asc("time.startDate"));
 	if (eventCriteria.getCategoryId() > 0) {
 	    criteria.add(Restrictions.eq("categories.id", eventCriteria.getCategoryId()));
