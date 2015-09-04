@@ -17,7 +17,7 @@ public class ControllerUtils {
 			for (Object o : spans.toArray()) {
 				Element e = (Element) o;
 				if (e.hasText()) {
-					e.prepend("\\n\\n");
+					e.prepend("\\n");
 				}
 			}
 
@@ -25,7 +25,7 @@ public class ControllerUtils {
 			for (Object o : ps.toArray()) {
 				Element e = (Element) o;
 				if (e.hasText()) {
-					e.prepend("\\n\\n");
+					e.prepend("\\n");
 				}
 			}
 
@@ -33,7 +33,7 @@ public class ControllerUtils {
 			for (Object o : divs.toArray()) {
 				Element e = (Element) o;
 				if (e.hasText()) {
-					e.prepend("\\n\\n");
+					e.prepend("\\n");
 				}
 			}
 			return document.text().replace("\\n", "\n");
