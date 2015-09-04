@@ -107,7 +107,7 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     };
     
     $scope.uploadPoster=function () {
-    	var file = $scope.myFile;
+    	var file = $scope.Myfile;
     	// file.name = "event_" + new Date().getTime();
     	// console.log(file);
     	var formData = new FormData();
@@ -149,6 +149,12 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
         
         $scope.editMode = true;
         $scope.showModalAddEvent = !$scope.showModalAddEvent;
+        $("#inputStartDate").datepicker({
+            dateFormat : "yy-mm-dd"
+        }).val()
+        $("#inputEndDate").datepicker({
+            dateFormat : "yy-mm-dd"
+        }).val()
     };
 
     $scope.formatDate= function(dateNumber) {
@@ -170,16 +176,26 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
         $scope.resetError();
 
         $http.delete('event/delete/' + id).success(function() {
-            $scope.getEventList();
+            // TODO
+        	//$scope.getEventList();
+        	for (var e in $scope.events) {
+        		if (e.id == id) {
+        			delete $scope.events.indexOf(e);
+        		}
+        	}
         }).error(function() {
             $scope.setError('Could not remove event');
         });
     };
 
+    $scope.master = {};
     $scope.resetEventForm = function() {
         $scope.resetError();
-        $scope.event = {};
-        $scope.place = {};
+        angular.copy($scope.master, $scope.event);
+        angular.copy($scope.master, $scope.place);
+        $scope.event.posterUrl = '';
+        //$scope.event = {};
+        //$scope.place = {};
         $scope.editMode = false;
     };
 
@@ -213,4 +229,8 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     $scope.toggleModalUploadFileEvent = function(){
         $scope.showModalUploadFileEvent = !$scope.showModalUploadFileEvent;
     };
+    
+    $scope.getDatetime = function() {
+    	  return new Date().getTime();
+    }
 };
