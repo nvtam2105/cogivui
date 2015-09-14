@@ -1,12 +1,35 @@
 package com.cogivui.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class ControllerUtils {
+public final class ControllerUtils {
+
+	public static List<Long> extractCategoryIds(String categoryIds) {
+		String[] categoryIdsStr = StringUtils.split(categoryIds, ",");
+		List<Long> ids = new ArrayList<Long>(0);
+		for (String id : categoryIdsStr) {
+			if (!"0".equals(id)) {
+				ids.add(Long.valueOf(id));
+			}
+		}
+		return ids;
+	}
+
+	public static String html2text(String html) {
+		return Jsoup.parse(html).text();
+	}
+	
+	public static String html2TextKeepBreakline(String html) {
+		String text = Jsoup.parse(html.replaceAll("(?i)<br[^>]*>", "br2n")).text();
+		return text.replaceAll("br2n", "\n");
+	}
 
 	public static String br2nl(String html) {
 		if (StringUtils.isNotBlank(html)) {

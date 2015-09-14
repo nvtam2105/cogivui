@@ -16,31 +16,35 @@ import com.cogivui.model.Event;
 @Transactional
 public class EventService extends GenericService<Event> {
 
-    @Autowired
-    private EventDao eventDao;
+	@Autowired
+	private EventDao eventDao;
 
-    @Override
-    public GenericDao<Event> getDefaultDao() {
-	return eventDao;
-    }
+	@Override
+	public GenericDao<Event> getDefaultDao() {
+		return eventDao;
+	}
 
-    public List<Event> getEvents() {
-	return eventDao.getEvents();
-    }
+	public List<Event> getEvents() {
+		return eventDao.getEvents();
+	}
 
-    public List<Event> getEventsUpComing(EventCriteria eventCriteria) {
-	return eventDao.getEventsUpComing(eventCriteria);
-    }
+	public List<Event> getEventsUpComing(EventCriteria eventCriteria) {
+		return eventDao.getEventsUpComing(eventCriteria);
+	}
 
-    public List<Event> getEventsToday(EventCriteria eventCriteria) {
-	return eventDao.getEventsToday(eventCriteria);
-    }
+	public List<Event> getEventsToday(EventCriteria eventCriteria) {
+		return eventDao.getEventsToday(eventCriteria);
+	}
 
-    public List<Event> getEventsTomorrow(EventCriteria eventCriteria) {
-	return eventDao.getEventsTomorrow(eventCriteria);
-    }
+	public List<Event> getEventsTomorrow(EventCriteria eventCriteria) {
+		return eventDao.getEventsTomorrow(eventCriteria);
+	}
 
-    public void saveNewEvents(List<Event> events) throws HibernateException {
-	eventDao.saveNewEvents(events);
-    }
+	public void saveNewEvents(List<Event> events) throws HibernateException {
+		eventDao.saveNewEvents(events);
+	}
+
+	public void saveOrUpdateOrCloneEvent(Event event) {
+		eventDao.saveOrUpdateOrCloneEvent(event);
+	}
 }

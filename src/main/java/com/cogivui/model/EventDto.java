@@ -7,6 +7,8 @@ import java.util.Set;
 public class EventDto implements Serializable {
 
 	private static final long serialVersionUID = 5077037732706877073L;
+	
+//	private long id;
 
 	private String name;
 
@@ -15,6 +17,8 @@ public class EventDto implements Serializable {
 	private Time time;
 
 	private String description;
+
+	private String except;
 
 	private String poster;
 
@@ -27,6 +31,8 @@ public class EventDto implements Serializable {
 	private Place place;
 
 	private float price;
+	
+//	private long distance;
 
 	private String hotline;
 
@@ -35,6 +41,12 @@ public class EventDto implements Serializable {
 	private int status;
 
 	private String originalUrl;
+
+	//private Date startDate;
+
+	//private String placeAddress;
+	
+	private String websiteUrl;
 
 	public String getName() {
 		return name;
@@ -131,6 +143,7 @@ public class EventDto implements Serializable {
 	public void setStatus(int status) {
 		this.status = status;
 	}
+
 	public String getOriginalUrl() {
 		return originalUrl;
 	}
@@ -140,11 +153,61 @@ public class EventDto implements Serializable {
 	}
 
 	public String getPosterUrl() {
-	    return posterUrl;
-        }
+		return posterUrl;
+	}
 
 	public void setPosterUrl(String posterUrl) {
-	    this.posterUrl = posterUrl;
-        }
+		this.posterUrl = posterUrl;
+	}
 
+	public String getExcept() {
+		return except;
+	}
+
+	public void setExcept(String except) {
+		this.except = except;
+	}
+	
+	public String getWebsiteUrl() {
+	    return websiteUrl;
+    }
+
+	public void setWebsiteUrl(String websiteUrl) {
+	    this.websiteUrl = websiteUrl;
+    }
+
+
+//	public Date getStartDate() {
+//		return startDate;
+//	}
+//
+//	public void setStartDate(Date startDate) {
+//		this.startDate = startDate;
+//	}
+//
+//	public String getPlaceAddress() {
+//		return placeAddress;
+//	}
+//
+//	public void setPlaceAddress(String placeAddress) {
+//		this.placeAddress = placeAddress;
+//	}
+
+//	public long getId() {
+//	    return id;
+//    }
+//
+//	public void setId(long id) {
+//	    this.id = id;
+//    }
+//
+//	public long getDistance() {
+//	    return distance;
+//    }
+//
+//	public void setDistance(long distance) {
+//	    this.distance = distance;
+//    }
+
+	
 }

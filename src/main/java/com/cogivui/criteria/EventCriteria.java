@@ -1,8 +1,13 @@
 package com.cogivui.criteria;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EventCriteria {
 
 	private long categoryId;
+	private List<Long> categoryIds = new ArrayList<Long>(0);
+
 	private long cityId;
 
 	private int limit;
@@ -38,6 +43,14 @@ public class EventCriteria {
 
 	public void setCityId(long cityId) {
 		this.cityId = cityId;
+	}
+
+	public List<Long> getCategoryIds() {
+		return categoryIds;
+	}
+
+	public void setCategoryIds(List<Long> categoryIds) {
+		this.categoryIds = categoryIds;
 	}
 
 }

@@ -25,10 +25,10 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
 	for(var i=0;i<13;i++) {
 		$scope.hours.push(i);
 	}
-	$scope.mins = [];
-	for(var i=0;i<60;i++) {
-		$scope.mins.push(i);
-	}
+	$scope.mins = [0,15,30,45];
+	//for(var i=0;i<60;i++) {
+	//	$scope.mins.push(i);
+	//}
 	
 	$scope.getCategories = function() {
         $http.get('category/list').success(function(categories){
@@ -37,6 +37,7 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     };
 
 	$scope.placeChanged = function() {
+		$scope.event.place ={};
         $scope.place = this.getPlace();
         // console.log($scope.place);
         
@@ -55,13 +56,15 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     	        page: 1,            // show first page
     	        count: 10 ,          // count per page
     	        sorting: {
-    	            id: 'desc'     // initial sorting
+    	        	// startDate: 'asc'     // initial sorting
     	        }
     	    }, {
     	        total: data.length, // length of data
     	        getData: function ($defer, params) {
     	        	var orderedData = params.sorting() ? $filter('orderBy')(data, params.orderBy()) : data;
-    	        	$scope.events = orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
+    	        	var filteredData = params.filter() ? $filter('filter')(orderedData, params.filter()) : orderedData;
+    	        	
+    	        	$scope.events = filteredData.slice((params.page() - 1) * params.count(), params.page() * params.count());
     	        	$defer.resolve($scope.events);
     	        }
     	    })
@@ -83,11 +86,15 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     $scope.updateEvent = function(event) {
         $scope.resetError();
         $scope.eventEditId = event.id;
+        
         delete event.id;
         delete event.distance;
+        delete event.startDate;
+        delete event.placeAddress;
+        delete event.cityName;
         
         $http.put('event/update/' + $scope.eventEditId, event).success(function() {
-            $scope.getEventList();
+            //$scope.getEventList();
             $scope.editMode = false;
         }).error(function() {
             $scope.setError('Could not update the event');
@@ -98,6 +105,13 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
         $scope.resetError();
         delete event.id;
         delete event.distance;
+        delete event.startDate;
+        delete event.placeAddress;
+        delete event.cityName;
+        
+        delete event.time.id;
+        delete event.place.id;
+        
         $http.post('event/create', event).success(function() {
         	$scope.resetEventForm();
             $scope.getEventList();
@@ -107,42 +121,51 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     };
     
     $scope.uploadPoster=function () {
-    	var file = $scope.Myfile;
-    	// file.name = "event_" + new Date().getTime();
-    	// console.log(file);
-    	var formData = new FormData();
-	    formData.append("file",file	);
-	    $http.post('event/uploadPoster', formData, {
-	    	 							transformRequest: angular.identity,
-							        	headers: { 'Content-Type': undefined }})
-		.success(function(data, status) {
-			$scope.event.poster = data.message;
-	        alert("Success ... " + status);
-        }).error(function(data, status) {
-            alert("Error ... " + status);
-        });
-    	    
+    	var file = document.getElementById('file2').files[0], r = new FileReader();
+	    r.onloadend = function(e){
+	      var data = e.target.result;
+	      // send you binary data via $http or $resource or do anything else with it
+	      var formData = new FormData();
+		  formData.append("file",file);
+		  $http.post('event/uploadPoster', formData, {
+		    	 							transformRequest: angular.identity,
+								        	headers: { 'Content-Type': undefined }})
+			.success(function(data, status) {
+				$scope.event.poster = data.message;
+				//alert($scope.event.poster)
+		        alert("Success ... " + status);
+	        }).error(function(data, status) {
+	            alert("Error ... " + status);
+	        });
+	    }
+	    r.readAsBinaryString(file);
     };
     
     $scope.uploadFileEvent=function () {
-    	var file = $scope.myFile;
-    	// console.log(file);
-    	var formData = new FormData();
-	    formData.append("file",file	);
-	    $http.post('event/uploadFileEvent', formData, {
-	    	 							transformRequest: angular.identity,
-							        	headers: { 'Content-Type': undefined }})
-		.success(function(data, status) {
-			$scope.event.poster = data.message;
-	        alert("Success ... " + status);
-        }).error(function(data, status) {
-            alert("Error ... " + status);
-        });
+    	var file = document.getElementById('file1').files[0];
+    	var r = new FileReader();
+	    r.onloadend = function(e){
+	      var data = e.target.result;
+	      // send you binary data via $http or $resource or do anything else with it
+	      var formData = new FormData();
+		    formData.append("file",file	);
+		    $http.post('event/uploadFileEvent', formData, {
+		    	 							transformRequest: angular.identity,
+								        	headers: { 'Content-Type': undefined }})
+			.success(function(data, status) {
+				//$scope.event.poster = data.message;
+		        alert("Success ... " + status);
+	        }).error(function(data, status) {
+	            alert("Error ... " + status);
+	        });
+	    }
+	    r.readAsBinaryString(file);
     	    
     };
     
     $scope.editEvent = function(event) {
         $scope.resetError();
+        //$scope.event.time= {}; 
         $scope.event = event;
         $scope.event.time.startDate = $scope.formatDate($scope.event.time.startDate);
         $scope.event.time.endDate = $scope.formatDate($scope.event.time.endDate);
@@ -181,8 +204,11 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
         	for (var e in $scope.events) {
         		if (e.id == id) {
         			delete $scope.events.indexOf(e);
+        			break;
         		}
         	}
+        	$scope.showModalAddEvent = false;
+        	$scope.getEventList();
         }).error(function() {
             $scope.setError('Could not remove event');
         });
@@ -232,5 +258,9 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     
     $scope.getDatetime = function() {
     	  return new Date().getTime();
-    }
+    };
+    
+    $scope.formatHottline = function(text) {
+    	 return text.replace(/\s+/g, '').replace(/.+/g,'').replace(/.,/g,'');  
+    };
 };

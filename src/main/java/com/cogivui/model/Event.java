@@ -1,5 +1,6 @@
 package com.cogivui.model;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,8 +20,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonManagedReference;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
-import com.cogivui.utils.ControllerUtils;
-
 @Entity
 @Table(name = "EVENT")
 @AttributeOverride(name = "id", column = @Column(name = "EVENT_ID"))
@@ -37,6 +36,8 @@ public class Event extends BaseEntity {
 	private Time time;
 
 	private String description;
+
+	private String except;
 
 	private String poster;
 
@@ -59,6 +60,14 @@ public class Event extends BaseEntity {
 	private String posterUrl;
 
 	private String originalUrl;
+
+	private String websiteUrl;
+
+	private String cityName;
+
+	// Transient Fields
+	private Date startDate;
+	private String placeAddress;
 
 	@Column(name = "NAME", nullable = false)
 	public String getName() {
@@ -183,16 +192,16 @@ public class Event extends BaseEntity {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
+
 	@Column(name = "POSTER_URL")
 	public String getPosterUrl() {
-	    return posterUrl;
-        }
+		return posterUrl;
+	}
 
 	public void setPosterUrl(String posterUrl) {
-	    this.posterUrl = posterUrl;
-        }
-	
+		this.posterUrl = posterUrl;
+	}
+
 	@Column(name = "ORIGINAL_URL")
 	public String getOriginalUrl() {
 		return originalUrl;
@@ -202,13 +211,59 @@ public class Event extends BaseEntity {
 		this.originalUrl = originalUrl;
 	}
 
+	@Column(name = "EXCEPT")
+	public String getExcept() {
+		return except;
+	}
+
+	public void setExcept(String except) {
+		this.except = except;
+	}
+
+	@Column(name = "WEBSITE_URL")
+	public String getWebsiteUrl() {
+		return websiteUrl;
+	}
+
+	public void setWebsiteUrl(String websiteUrl) {
+		this.websiteUrl = websiteUrl;
+	}
+
+	@Transient
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	@Transient
+	public String getPlaceAddress() {
+		return placeAddress;
+	}
+
+	public void setPlaceAddress(String placeAddress) {
+		this.placeAddress = placeAddress;
+	}
+
+	@Transient
+	public String getCityName() {
+		return cityName;
+	}
+
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+
 	public static Event clone(EventDto eventDto) {
 		Event e = new Event();
 		e.setName(eventDto.getName());
 		e.setHotline(eventDto.getHotline());
 		e.setVenueName(eventDto.getVenueName());
 		e.setTime(eventDto.getTime());
-		e.setDescription(ControllerUtils.br2nl(eventDto.getDescription()));
+		e.setDescription(eventDto.getDescription());
+		e.setExcept(eventDto.getExcept());
 		e.setPoster(eventDto.getPoster());
 		e.setPlace(eventDto.getPlace());
 		e.setPrice(eventDto.getPrice());
@@ -219,9 +274,30 @@ public class Event extends BaseEntity {
 
 		e.setCategories(eventDto.getCategories());
 		e.setTags(eventDto.getTags());
+		e.setWebsiteUrl(eventDto.getWebsiteUrl());
 
 		return e;
 	}
-
 	
+	public static Event copy(Event data) {
+		Event e = new Event();
+		e.setName(data.getName());
+		e.setHotline(data.getHotline());
+		e.setVenueName(data.getVenueName());
+		e.setTime(data.getTime());
+		e.setDescription(data.getDescription());
+		e.setExcept(data.getExcept());
+		e.setPoster(data.getPoster());
+		e.setPlace(data.getPlace());
+		e.setPrice(data.getPrice());
+		e.setPosterUrl(data.getPosterUrl());
+		e.setStatus(data.getStatus());
+		e.setOriginalUrl(data.getOriginalUrl());
+		e.setOrganizerContact(data.getOrganizerContact());
+		e.setCategories(data.getCategories());
+		e.setTags(data.getTags());
+		e.setWebsiteUrl(data.getWebsiteUrl());
+		return e;
+	}
+
 }

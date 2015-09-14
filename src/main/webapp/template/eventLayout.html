@@ -1,32 +1,21 @@
-<!-- <modal title="Upload File Event" visible="showModalUploadFileEvent">
+<button ng-click="toggleModalUploadFileEvent()" class="btn btn-info">Upload Event By File</button>
+<button ng-click="toggleModalAddEvent()" class="btn btn-info">Add Event</button>
+<button onclick="location.reload();" class="btn btn-warning">Refresh</button>
+
+
+<modal title="Upload File Event" visible="showModalUploadFileEvent">
 <div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
 <form class="form-horizontal" role="form" enctype="multipart/form-data">
     <div class="form-group">
         <label class="control-label col-sm-2">Update File</label>
         <div class="col-sm-10">
-            <input type="file" file-model="myFile1" />
+            <input type="file" id="file1" name="file1"/>
             <button type="button" class="btn btn-primary" ng-click="uploadFileEvent()">Upload File</button>
         </div>
     </div>
 </form>
-</modal> -->
+</modal>
 
-<!-- <button ng-click="toggleModalUploadFileEvent()" class="btn btn-info">Upload File Event</button> -->
-
-<div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
-<form class="form-horizontal" role="form">
-	<div class="form-group">
-		<label class="control-label col-sm-2">Update File</label>
-		<div class="col-sm-10">
-			<input type="file" file-model="myFile" />
-			<button type="button" class="btn btn-primary"
-				ng-click="uploadFileEvent()">Upload File</button>
-		</div>
-	</div>
-</form>
-
-<button ng-click="toggleModalAddEvent()" class="btn btn-info">Add
-	Event</button>
 <modal title="Add/Edit Event" visible="showModalAddEvent">
 <div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
 <form class="form-horizontal" role="form" enctype="multipart/form-data">
@@ -38,6 +27,20 @@
 			<a ng-href="{{event.originalUrl}}" target="_blank" ng-show="editMode">{{event.originalUrl}}</a>
 			<input type="text" class="form-control" ng-model="event.originalUrl" ng-show="!editMode"></input>
 		</div>
+</div>
+
+ <div class="form-group" ng-show="event.poster">
+		<label class="control-label col-sm-2" for="poster">Poster</label>
+		<div class="col-sm-10">
+			<img ng-src="resources/event_image/{{event.poster}}" alt="{{event.poster}}" width="300" height="200"  />
+		</div>
+	</div>
+	
+<div class="form-group" ng-show="event.posterUrl">
+	<label class="control-label col-sm-2" for="poster">Poster URL</label>
+	<div class="col-sm-10">
+		<img ng-src="{{event.posterUrl}}" alt="{{event.posterUrl}}" width="300" height="200"  />
+	</div>
 </div>
  <div class="form-group">
 		<label class="control-label col-sm-2" for="name">Event Name</label>
@@ -89,11 +92,23 @@
 			</div>
 		</div>
 	</fieldSet>
+	
+	<div class="form-group">
+		<label class="control-label col-sm-2" for="category">Category</label>
+		<div class="col-sm-10">
+			<label ng-repeat="category in categories"> <input
+				type="checkbox" data-checklist-model="event.categories"
+				data-checklist-value="category" /> {{category.name}}
+
+			</label>
+		</div>
+	</div> 
 
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="hotline">Hotline</label>
 		<div class="col-sm-10">
-			<input type="text" id="hotline" ng-model="event.hotline"
+			<input type="text" only-digits id="hotline" ng-model="event.hotline"
+				ng-blur="formatHottline(event.hotline)"	
 				placeholder="Hotline" required></input>
 		</div>
 	</div>
@@ -101,7 +116,7 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="price">Price</label>
 		<div class="col-sm-10">
-			<input type="number" id="price" ng-model="event.price"
+			<input type="text" only-digits id="price" ng-model="event.price" ng-focus="event.price = event.price.replace('0','');"
 				convert-to-number placeholder="Price"></input> VND
 		</div>
 	</div>
@@ -166,14 +181,17 @@
 		<label class="control-label col-sm-2">Place Map</label>
 		<div class="col-sm-10">
 			<div map-lazy-load="http://maps.google.com/maps/api/js">
-				<map
-					center="[{{place.geometry.location.lat()}}, {{place.geometry.location.lng()}}]"
-					zoom="16" scrollwheel="false">
-					<marker
-						position="[{{place.geometry.location.lat()}}, {{place.geometry.location.lng()}}]"
-						title="hello"></marker>
-				</map>
+                <map center="[{{place.geometry.location.lat()}}, {{place.geometry.location.lng()}}]" zoom="16" scrollwheel="false">
+                    <marker position="[{{place.geometry.location.lat()}}, {{place.geometry.location.lng()}}]" title="hello"></marker>
+                </map>
 			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="control-label col-sm-2" for="except">Except</label>
+		<div class="col-sm-10">
+		 	<textarea class="form-control" ng-model="event.except" rows="5" id="except"></textarea>
 		</div>
 	</div>
 
@@ -184,39 +202,16 @@
 		</div>
 	</div>
 
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="category">Category</label>
-		<div class="col-sm-10">
-			<label ng-repeat="category in categories"> <input
-				type="checkbox" data-checklist-model="event.categories"
-				data-checklist-value="category" /> {{category.name}}
-
-			</label>
-		</div>
-	</div> 
+	
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="poster">Update
 			Poster</label>
 		<div class="col-sm-10">
-			<input type="file" file-model="Myfile" />
-			<button type="submit" class="btn btn-primary"
-				ng-click="uploadPoster()">Upload Poster</button>
+			<input type="file" id="file2" name="file2"/>
+			<button type="button" class="btn btn-primary" ng-click="uploadPoster();">Upload Poster</button>
 		</div>
 	</div>
 
-	 <div class="form-group" ng-show="event.poster">
-		<label class="control-label col-sm-2" for="poster">Poster name</label>
-		<div class="col-sm-10">
-			<img ng-src="resources/event_image/{{event.poster}}" alt="{{event.posterUrl}}" width="500" height="300"  />
-		</div>
-	</div>
-
-	<div class="form-group" ng-show="event.posterUrl">
-		<label class="control-label col-sm-2" for="poster">Poster URL</label>
-		<div class="col-sm-10">
-			<img ng-src="{{event.posterUrl}}" alt="{{event.posterUrl}}" width="500" height="300"  />
-		</div>
-	</div>
 
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="poster">Status</label>
@@ -243,6 +238,7 @@
 				<button type="button" class="btn btn-primary"
 					ng-disabled="!event.name" ng-show="editMode"
 					ng-click="duplicateEvent(event)">Duplicate event</button>
+                <button class="btn btn-mini btn-danger" ng-show="editMode" ng-click="removeEvent(event.id)">Remove</button>
 				<button type="button" class="btn" ng-click="resetEventForm()">Reset</button>
 			</div>
 		</div>
@@ -260,21 +256,19 @@
 </script> </modal>
 
 <h3>Event List</h3>
-<div class="alert alert-info" ng-show="events.length == 0">No events found</div>
-<p><strong>Sorting:</strong> {{tableParams.sorting()|json}}
-<table id="eventList" class="table table-bordered table-striped table-hover" ng-table="tableParams" ng-show="events.length > 0">
+<table id="eventList" class="table table-bordered table-striped table-hover" show-filter="true" ng-table="tableParams">
 	<tbody>
 		<tr ng-repeat="event in events">
-			<td sortable="'id'" data-title="'ID'">{{event.id}}</td>
-			<td sortable="'name'" data-title="'Name'">{{event.name}}</td>
-			<td sortable="'address'" data-title="'Address'">{{event.place.address}}</td>
-            <td sortable="'startDate'" data-title="'Start Date'">{{event.time.startDate | date:'dd-MM-yyyy' }}</td>
-			<td sortable="'hotline'" data-title="'Hotline'">{{event.hotline}}</td>
-			<td sortable="'description'" data-title="'Description'">{{event.description.substr(0,50)}}</td>
-			<td sortable="'status'" data-title="'Status'">{{event.status == '1' ? 'APPROVED' : 'NOT APPROVED'}}</td>
-			<td style="width: 200px; text-align: center;">
-				<button class="btn btn-mini btn-danger"
-					ng-click="removeEvent(event.id)">Remove</button>
+			<td  sortable="'id'" data-title="'ID'">{{event.id}}</td>
+			<td sortable="'name'" data-title="'Name'" filter="{ name: 'text'}">{{event.name}}</td>
+			<td sortable="'placeAddress'" data-title="'Address'" filter="{ placeAddress: 'text'}">{{event.placeAddress}}</td>
+			<td sortable="'description'" data-title="'Description'" filter="{ description: 'text'}">{{event.description.substr(0,50)}}</td>
+			<td sortable="'websiteUrl'" data-title="'WebsiteUrl'" filter="{ websiteUrl: 'text'}">{{event.websiteUrl}}</td>
+			<td sortable="'cityName'" data-title="'City'">{{event.cityName}}</td>
+            <td sortable="'startDate'" data-title="'StartDate'"  style="font-weight:bold;">{{event.startDate | date:'dd-MM-yyyy' }}</td>
+			<td sortable="'status'" data-title="'Status'" style="{{event.status == '1' ? 'color:green;font-weight:bold' : 'color:red;font-weight:bold'}}">{{event.status == '1' ? 'APPROVED' : 'NOT APPROVED'}}</td>
+			<td style="width: 150px; text-align: center;">
+				 <button class="btn btn-mini btn-danger" ng-click="removeEvent(event.id)">Remove</button>
 				<button class="btn btn-mini btn-success" ng-click="editEvent(event)">Edit</button>
 			</td>
 		</tr>

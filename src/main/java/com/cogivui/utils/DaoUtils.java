@@ -26,12 +26,12 @@ public final class DaoUtils {
 
     public static Criterion lessThanIgnoreTime(String propertyName, Date queryDate) {
 	Date dateNoTime = DateUtils.truncate(queryDate, Calendar.DATE);
-	return Restrictions.le(propertyName, dateNoTime);
+	return Restrictions.lt(propertyName, dateNoTime);
     }
 
     public static Criterion greaterThanIgnoreTime(String propertyName, Date queryDate) {
 	Date dateNoTime = DateUtils.truncate(queryDate, Calendar.DATE);
-	return Restrictions.ge(propertyName, dateNoTime);
+	return Restrictions.gt(propertyName, dateNoTime);
     }
 
     public static Criterion equalIgnoreTime(String propertyName, Date queryDate) {
