@@ -5,7 +5,7 @@
  * 
  * @constructor
  */
-var EventController = function($scope, $http, $filter, ngTableParams) {
+var EventController = function($scope,$window, $http, $filter, ngTableParams) {
 	
 	$scope.event = {};
 	$scope.event.time={};
@@ -263,4 +263,11 @@ var EventController = function($scope, $http, $filter, ngTableParams) {
     $scope.formatHottline = function(text) {
     	 return text.replace(/\s+/g, '').replace(/.+/g,'').replace(/.,/g,'');  
     };
+    
+    $scope.shareOnFacebook = function() {
+		$window.location.replace("/cogivui/social/facebook/signin");
+	};
+	$scope.shareOnTwitter = function() {
+		$window.location.replace("/cogivui/social/twitter/signin");
+	};
 };
