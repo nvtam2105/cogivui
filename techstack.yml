@@ -1,0 +1,1369 @@
+repo_name: nvtam2105/cogivui
+report_id: d5f38421319f258637e2bb7cab9c92b7
+repo_type: Public
+timestamp: '2023-11-10T16:09:27+00:00'
+requested_by: nvtam2105
+provider: github
+branch: master
+detected_tools_count: 97
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source: Repo Metadata
+- name: CoffeeScript
+  description: A little language that compiles into JavaScript
+  website_url: http://coffeescript.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1178/slQydAMv.png
+  detection_source: src/main/webapp/resources/bower_components/morrisjs/lib/morris.area.coffee
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: Bootstrap
+  description: Simple and flexible HTML, CSS, and JS for popular UI components and
+    interactions
+  website_url: http://getbootstrap.com/
+  version: 3.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
+  detection_source_url: src/main/webapp/resources/bower_components/metisMenu/bower.json
+  detection_source: target/cogivui/resources/bower_components/startbootstrap-sb-admin-2/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 1.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/bower.json
+  detection_source: target/cogivui/resources/bower_components/textAngular/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Hibernate
+  description: Idiomatic persistence for Java and relational databases.
+  website_url: http://hibernate.org/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/1756/1uNl_IZX.png
+  detection_source: pom.xml
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source: pom.xml
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Browserify
+  description: Browser-side require() the node.js way
+  website_url: http://browserify.org/
+  version: 9.0.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/849/9esmqty2.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Chai
+  description: A BDD / TDD assertion library
+  website_url: http://chaijs.com/
+  version: 1.9.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1725/chai.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/bower.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Coveralls
+  description: Track your project's code coverage over time, changes to files, and
+    badge your GitHub repo
+  website_url: https://coveralls.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Code Coverage
+  image_url: https://img.stackshare.io/service/680/a43e4a04cb9f778842de43f95db59a14.png
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Grunt
+  description: The JavaScript Task Runner
+  website_url: http://gruntjs.com/
+  version: 0.4.5
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/845/falgg2jybmhgk16y62lr.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: JSHint
+  description: A Static Code Analysis Tool for JavaScript
+  website_url: http://www.jshint.com/about/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/1945/mzh2bRes_400x400.png
+  detection_source: target/cogivui/resources/bower_components/holderjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  version: 3.8.1
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: pom.xml
+  detection_source: target/cogivui/resources/bower_components/jquery-ui/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Jasmine
+  description: DOM-less simple JavaScript testing framework
+  website_url: http://jasmine.github.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Karma
+  description: Spectacular Test Runner for JavaScript
+  website_url: http://karma-runner.github.io/
+  version: 0.12.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Browser Testing
+  image_url: https://img.stackshare.io/service/1420/TidYGd6a.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Log4j
+  description: A Java-based logging utility
+  website_url: https://logging.apache.org/log4j/2.x/
+  version: 1.2.17
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Logging Tools
+  image_url: https://img.stackshare.io/service/2804/Coralogix-log4j-integration.jpg
+  detection_source_url: pom.xml
+  detection_source: pom.xml
+  last_updated_by: tampointer
+  last_updated_on: 2015-11-17 10:53:43.000000000 Z
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 1.17.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/bower.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: PhantomJS
+  description: Scriptable Headless WebKit
+  website_url: https://phantomjs.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Headless Browsers
+  image_url: https://img.stackshare.io/service/1832/phantomjs.png
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: QUnit
+  description: A JavaScript Unit Testing framework
+  website_url: http://qunitjs.com/
+  version: 1.14.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1421/b706f022230831a3d391db504a139e21.png
+  detection_source_url: src/main/webapp/resources/bower_components/jquery/bower.json
+  detection_source: target/cogivui/resources/bower_components/jquery/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: RequireJS
+  description: JavaScript file and module loader
+  website_url: http://requirejs.org/
+  version: 2.1.10
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/852/1781835.png
+  detection_source_url: src/main/webapp/resources/bower_components/jquery/bower.json
+  detection_source: target/cogivui/resources/bower_components/jquery/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: SLF4J
+  description: Simple logging facade for Java
+  website_url: http://slf4j.org/
+  open_source: false
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Log Management
+  image_url: https://img.stackshare.io/service/2805/05518ecaa42841e834421e9d6987b04f_400x400.png
+  detection_source: pom.xml
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: SinonJS
+  description: Standalone test spies, stubs and mocks for JavaScript
+  website_url: http://sinonjs.org/
+  version: 1.8.1
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/3509/logo.png
+  detection_source_url: src/main/webapp/resources/bower_components/jquery/bower.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source: target/cogivui/resources/bower_components/ngmap/.travis.yml
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 3.8.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Apache Camel
+  description: A versatile open source integration framework
+  website_url: https://camel.apache.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg
+  detection_source: src/main/resources/application.properties
+  last_updated_by: tampointer
+  last_updated_on: 2015-11-17 10:53:43.000000000 Z
+- name: Firefox
+  description: Mozilla's Web Browser
+  website_url: https://www.mozilla.org/en-US/firefox/
+  open_source: false
+  hosted_saas: false
+  category: Back Office
+  sub_category: Web Browser
+  image_url: https://img.stackshare.io/service/8705/768px-Firefox_Logo__2017.svg.png
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Font Awesome
+  description: The internet's most popular icon toolkit
+  website_url: https://fontawesome.com/
+  version: '4.2'
+  open_source: true
+  hosted_saas: false
+  category: Design
+  sub_category: Fonts
+  image_url: https://img.stackshare.io/service/3244/1_Mr1Fy00XjPGNf1Kkp_hWtw_2x.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap-social/bower.json
+  detection_source: target/cogivui/resources/bower_components/textAngular/bower.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: Lodash
+  description: A JavaScript utility library
+  website_url: https://lodash.com
+  version: 3.10.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/2438/lodash.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/bower.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: Moment.js
+  description: A JavaScript date library for parsing, validating, manipulating, and
+    formatting dates
+  website_url: http://momentjs.com/
+  version: 2.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/3643/Xrtdc94q_400x400.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/holderjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: jsdoc
+  description: An API documentation generator for JavaScript
+  website_url: http://usejsdoc.org/
+  open_source: false
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Documentation as a Service & Tools
+  image_url: https://img.stackshare.io/service/4047/js-doc.png
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: bower
+  description: The browser package manager
+  package_url: https://www.npmjs.com/bower
+  version: 1.2.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16205/default_b4f5b6f31c5ab1ffee4bacf20842cd41a8f2658d.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+  vulnerabilities:
+  - name: Symlink Arbitrary File Overwrite in bower
+    cve_id: CVE-2019-5484
+    cve_url: https://github.com/advisories/GHSA-p6mr-pxg4-68hx
+    detected_date: Aug 22
+    severity: high
+    first_patched: 1.8.8
+- name: btoa
+  description: Btoa for Node.JS
+  package_url: https://www.npmjs.com/btoa
+  version: 1.1.2
+  license: MIT,Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17351/default_b8b4be8bd54f9619446b80b2bf448c0891101f2a.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: canonical-path
+  description: Paths that always use forward slashes
+  package_url: https://www.npmjs.com/canonical-path
+  version: 0.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18339/default_d5b77997c52e60064f8f7efaaf6a6e4c314ba8e4.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: compression
+  description: Node.js compression middleware
+  package_url: https://www.npmjs.com/compression
+  version: 1.0.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16187/default_9a7a7dcd69c12c746dc4000dc4d1b75758079c9f.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+  vulnerabilities:
+  - name: qs vulnerable to Prototype Pollution
+    cve_id: CVE-2022-24999
+    cve_url: https://github.com/advisories/GHSA-hrpp-h998-j3pp
+    detected_date: Dec 7
+    severity: high
+    first_patched: 4.17.3
+  - name: No Charset in Content-Type Header in express
+    cve_id: CVE-2014-6393
+    cve_url: https://github.com/advisories/GHSA-gpvr-g6gh-9mc2
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 4.5.0
+- name: glob
+  description: A little globber
+  package_url: https://www.npmjs.com/glob
+  version: 5.0.5
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15875/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-autoprefixer
+  description: Parse CSS and add vendor-prefixed CSS properties using the Can I Use
+    database
+  package_url: https://www.npmjs.com/grunt-autoprefixer
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17148/default_9746cbb559e39df4afd8298f9a252dff8519e646.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-clean
+  description: Clean files and folders
+  package_url: https://www.npmjs.com/grunt-contrib-clean
+  version: 0.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15939/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-coffee
+  description: Compile CoffeeScript files to JavaScript
+  package_url: https://www.npmjs.com/grunt-contrib-coffee
+  version: 0.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16284/default_9924e5da1d50ea01e52b48e4fae4b1347af5e4ff.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-compress
+  description: Compress files and folders
+  package_url: https://www.npmjs.com/grunt-contrib-compress
+  version: 0.13.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16797/default_661bbd7f9556b6c5c0b8be11cd13e1813fc5c977.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-concat
+  description: Concatenate files
+  package_url: https://www.npmjs.com/grunt-contrib-concat
+  version: 0.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16075/default_d4e765f8a43dcfd232c8b9ee9732058bc27c727a.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-connect
+  description: Start a connect web server
+  package_url: https://www.npmjs.com/grunt-contrib-connect
+  version: 0.10.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16236/default_380ae3d73e22c7ca1f42b96479bcd0095dabc0d3.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-copy
+  description: Copy files and folders
+  package_url: https://www.npmjs.com/grunt-contrib-copy
+  version: 0.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16056/default_c7b204838197013798409fa2b4dafce450edc7fb.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-csslint
+  description: Lint CSS files
+  package_url: https://www.npmjs.com/grunt-contrib-csslint
+  version: 0.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17982/default_4fd967542aef030b38a14a6ad69d2f385c52808d.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-cssmin
+  description: Minify CSS
+  package_url: https://www.npmjs.com/grunt-contrib-cssmin
+  version: 0.12.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16324/default_b5c8f3c8e46d368f74a982d06d7f13291fe651ea.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/metisMenu/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-htmlmin
+  description: Minify HTML
+  package_url: https://www.npmjs.com/grunt-contrib-htmlmin
+  version: 0.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17474/default_e5adc22c59a44962e41dfaec51edeb42c083f2f4.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-jshint
+  description: Validate files with JSHint
+  package_url: https://www.npmjs.com/grunt-contrib-jshint
+  version: 0.11.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15898/default_59a1b5716eefa3750c20936c3d53ff13a6390ee1.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/metisMenu/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-less
+  description: Compile LESS files to CSS
+  package_url: https://www.npmjs.com/grunt-contrib-less
+  version: 1.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16581/default_536789d2630ed352dc721a1c915ab456b7660201.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-qunit
+  description: Run QUnit unit tests in a headless Chrome instance
+  package_url: https://www.npmjs.com/grunt-contrib-qunit
+  version: 0.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16756/default_6e51a44775c61dcb2888547ad406a2f0cf2c344e.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-requirejs
+  description: Optimize RequireJS projects using r.js
+  package_url: https://www.npmjs.com/grunt-contrib-requirejs
+  version: 0.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17348/default_c1932d441699b98abea6098c6f8f65e2acb4f5ed.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: grunt-contrib-uglify
+  description: Minify JavaScript files with UglifyJS
+  package_url: https://www.npmjs.com/grunt-contrib-uglify
+  version: 0.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15954/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-contrib-watch
+  description: Run predefined tasks whenever watched file patterns are added
+  package_url: https://www.npmjs.com/grunt-contrib-watch
+  version: 0.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15932/default_4dc9671df0093fd7061f6455afdf054e6cc9dacb.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-exec
+  description: Grunt task for executing shell commands
+  package_url: https://www.npmjs.com/grunt-exec
+  version: 0.4.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16754/default_6dc099b12d47e378ae121fb53c336fe5d8f0ffc8.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-jscs
+  description: Grunt task for checking JavaScript Code Style with jscs
+  package_url: https://www.npmjs.com/grunt-jscs
+  version: 1.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16510/default_4e3259350c525d1d859fa80a938000081d7c9db8.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-mocha
+  description: Grunt task for running client-side Mocha specs in PhantomJS
+  package_url: https://www.npmjs.com/grunt-mocha
+  version: 0.4.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17369/default_c1932d441699b98abea6098c6f8f65e2acb4f5ed.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-saucelabs
+  description: Grunt task running tests using Sauce Labs
+  package_url: https://www.npmjs.com/grunt-saucelabs
+  version: 8.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17562/default_3c6aa8b4297562bfc2a090966a5bc0fad1d0b678.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: grunt-shell
+  description: Run shell commands
+  package_url: https://www.npmjs.com/grunt-shell
+  version: 0.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16396/default_22cf6cee54c697b5a223902962cc57a55ee80be9.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-browserify
+  description: Bundle modules with Browserify
+  package_url: https://www.npmjs.com/gulp-browserify
+  version: 0.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16725/default_5ea3918e441555ef1fd413f4100fe15fe23b366f.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: gulp-bump
+  description: Bump npm versions with Gulp
+  package_url: https://www.npmjs.com/gulp-bump
+  version: 0.1.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16313/default_f130429ee56156823c8c6e94da6fb7aa07f07ba5.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-clean
+  description: A gulp plugin for removing files and folders
+  package_url: https://www.npmjs.com/gulp-clean
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16218/default_41f04716a804e853d5c38a5b81ee0ea8a842ad82.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-concat
+  description: Concatenates files
+  package_url: https://www.npmjs.com/gulp-concat
+  version: 2.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15973/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-connect
+  description: Gulp plugin to run a webserver
+  package_url: https://www.npmjs.com/gulp-connect
+  version: 2.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16446/default_5ffcf8d02a3454bd25d27d236025c6d078c3b672.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-debug
+  description: Debug Vinyl file streams to see what files are run through your Gulp
+    pipeline
+  package_url: https://www.npmjs.com/gulp-debug
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16648/default_783b9b6c17b863f264c1418b0eb831316f741afd.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-gh-pages
+  description: Gulp plugin to publish contents to Github pages
+  package_url: https://www.npmjs.com/gulp-gh-pages
+  version: 0.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16967/default_7a9e63a9526bf5da91e7a6f9f792b13e3543a875.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: gulp-header
+  description: Gulp extension to add header to file
+  package_url: https://www.npmjs.com/gulp-header
+  version: 1.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16259/default_9924e5da1d50ea01e52b48e4fae4b1347af5e4ff.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/holderjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-jshint
+  description: JSHint plugin for gulp
+  package_url: https://www.npmjs.com/gulp-jshint
+  version: 1.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16050/default_c7b204838197013798409fa2b4dafce450edc7fb.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/holderjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-protractor
+  description: A helper for protactor and gulp
+  package_url: https://www.npmjs.com/gulp-protractor
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17802/default_78858facb60c08d15198eb69a6c7f48463f2c09f.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-rename
+  description: Rename files
+  package_url: https://www.npmjs.com/gulp-rename
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15895/default_e4668902f8489350db9b0fb228523a571ef05b26.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-replace
+  description: A string replace plugin for gulp
+  package_url: https://www.npmjs.com/gulp-replace
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16150/default_73326c44fbfa7369fd17573edb113e5d849468bc.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-rev
+  description: 'Static asset revisioning by appending content hash to filenames: unicorn.css
+    =&gt; unicorn-d41d8cd98f.css'
+  package_url: https://www.npmjs.com/gulp-rev
+  version: 0.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17180/default_fbe883dfc6d978f82179fa11bdf634af1b6751fa.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-sequence
+  description: Run a series of gulp tasks in order
+  package_url: https://www.npmjs.com/gulp-sequence
+  version: 0.3.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16729/default_c11d90814ded8fcd305b22fdc42b42a3111f1f6d.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: gulp-shell
+  description: A handy command line interface for gulp
+  package_url: https://www.npmjs.com/gulp-shell
+  version: 0.2.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16370/default_22cf6cee54c697b5a223902962cc57a55ee80be9.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-strip-debug
+  description: Strip console and debugger statements from JavaScript code
+  package_url: https://www.npmjs.com/gulp-strip-debug
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18527/default_7b1c0aa4a764d674ffd721ae5b17289360266c1d.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-tap
+  description: Easiest way to tap into a pipeline
+  package_url: https://www.npmjs.com/gulp-tap
+  version: 0.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17412/default_11ae83a8e74ae9812850843051a0501a3bb5313f.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-uglify
+  description: Minify files with UglifyJS
+  package_url: https://www.npmjs.com/gulp-uglify
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15910/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-util
+  description: Utility functions for gulp plugins
+  package_url: https://www.npmjs.com/gulp-util
+  version: 2.2.16
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15912/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: gulp-webserver
+  description: Gulp plugin to run a local webserver with LiveReload
+  package_url: https://www.npmjs.com/gulp-webserver
+  version: 0.9.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17173/default_21a9522c66101ebad0e63609af74acb35fe29a0a.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: jasmine-core
+  description: Official packaging of Jasmine's core files for use by Node.js projects
+  package_url: https://www.npmjs.com/jasmine-core
+  version: 2.3.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15905/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-chrome-launcher
+  description: A Karma plugin. Launcher for Chrome and Chrome Canary
+  package_url: https://www.npmjs.com/karma-chrome-launcher
+  version: 0.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15860/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-coverage
+  description: A Karma plugin. Generate code coverage
+  package_url: https://www.npmjs.com/karma-coverage
+  version: 0.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15951/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-firefox-launcher
+  description: A Karma plugin. Launcher for Firefox
+  package_url: https://www.npmjs.com/karma-firefox-launcher
+  version: 0.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16026/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: src/main/webapp/resources/bower_components/ng-table/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-jasmine
+  description: A Karma plugin - adapter for Jasmine testing framework
+  package_url: https://www.npmjs.com/karma-jasmine
+  version: 0.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15886/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-ng-html2js-preprocessor
+  description: A Karma plugin
+  package_url: https://www.npmjs.com/karma-ng-html2js-preprocessor
+  version: 0.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17699/default_52c11a434d2ce37281914a7f804e07cf95ab96f7.png
+  detection_source_url: src/main/webapp/resources/bower_components/ng-table/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-25 17:59:24.000000000 Z
+- name: karma-phantomjs-launcher
+  description: A Karma plugin. Launcher for PhantomJS
+  package_url: https://www.npmjs.com/karma-phantomjs-launcher
+  version: 0.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15947/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: load-grunt-tasks
+  description: Load multiple grunt tasks using globbing patterns
+  package_url: https://www.npmjs.com/load-grunt-tasks
+  version: 3.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16062/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: markdown-it
+  description: Markdown-it - modern pluggable markdown parser
+  package_url: https://www.npmjs.com/markdown-it
+  version: 4.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16277/default_ab17554b7e80af3d234b14168ed61e75d43f8eee.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+  vulnerabilities:
+  - name: Uncontrolled Resource Consumption in markdown-it
+    cve_id: CVE-2022-21670
+    cve_url: https://github.com/advisories/GHSA-6vfc-qv3f-vr6c
+    detected_date: Jan 13
+    severity: moderate
+    first_patched: 12.3.2
+- name: matchdep
+  description: Use micromatch to filter npm module dependencies by name
+  package_url: https://www.npmjs.com/matchdep
+  version: 0.1.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16416/default_aa91da3cee4d961f0eea8ca5de77f399ec7ec794.png
+  detection_source_url: src/main/webapp/resources/bower_components/morrisjs/package.json
+  detection_source: target/cogivui/resources/bower_components/morrisjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: moment
+  description: Parse, validate, manipulate, and display dates
+  package_url: https://www.npmjs.com/moment
+  version: 2.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15847/default_4479dbac220be99e50e724b2df6cf415241d71fd.png
+  detection_source_url: src/main/webapp/resources/bower_components/holderjs/package.json
+  detection_source: target/cogivui/resources/bower_components/holderjs/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+  vulnerabilities:
+  - name: 'Path Traversal: ''dir/../../filename'' in moment.locale'
+    cve_id: CVE-2022-24785
+    cve_url: https://github.com/advisories/GHSA-8hfj-j24r-96c4
+    detected_date: Apr 9
+    severity: high
+    first_patched: 2.29.2
+  - name: Regular Expression Denial of Service in moment
+    cve_id: CVE-2017-18214
+    cve_url: https://github.com/advisories/GHSA-446m-mv8f-q348
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.19.3
+  - name: Moderate severity vulnerability that affects moment
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-hxf5-mg84-pj4m
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 2.11.2
+  - name: Regular Expression Denial of Service in moment
+    cve_id: CVE-2016-4055
+    cve_url: https://github.com/advisories/GHSA-87vv-r9j6-g5qv
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 2.11.2
+- name: rimraf
+  description: A deep deletion module for node
+  package_url: https://www.npmjs.com/rimraf
+  version: 2.0.1
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15807/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: src/main/webapp/resources/bower_components/jquery-ui/package.json
+  detection_source: target/cogivui/resources/bower_components/jquery-ui/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: run-sequence
+  description: Run a series of dependent gulp tasks in order
+  package_url: https://www.npmjs.com/run-sequence
+  version: 0.3.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16004/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: selenium-webdriver
+  description: The official WebDriver JavaScript bindings from the Selenium project
+  package_url: https://www.npmjs.com/selenium-webdriver
+  version: 2.45.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16708/default_848dc5bc612658cea8d631cff0259d9588c28fea.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: through2
+  description: A tiny wrapper around Node.js streams.Transform
+  package_url: https://www.npmjs.com/through2
+  version: 0.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15948/default_fdb56d0865cbc86d9157d5e33f9313d760ed0e83.png
+  detection_source_url: src/main/webapp/resources/bower_components/ngmap/package.json
+  detection_source: target/cogivui/resources/bower_components/ngmap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
+- name: time-grunt
+  description: Display the elapsed execution time of grunt tasks
+  package_url: https://www.npmjs.com/time-grunt
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16275/default_ab17554b7e80af3d234b14168ed61e75d43f8eee.png
+  detection_source_url: src/main/webapp/resources/bower_components/bootstrap/package.json
+  detection_source: target/cogivui/resources/bower_components/bootstrap/package.json
+  last_updated_by: tampointer
+  last_updated_on: 2015-08-24 09:56:47.000000000 Z
