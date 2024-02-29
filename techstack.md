@@ -3,37 +3,37 @@
 ## Tech Stack
 nvtam2105/cogivui is built on the following main stack:
 
-- [Coveralls](https://coveralls.io/) – Code Coverage
-- [Jasmine](http://jasmine.github.io/) – Javascript Testing Framework
-- [Mocha](http://mochajs.org/) – Javascript Testing Framework
-- [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
-- [Grunt](http://gruntjs.com/) – JS Build Tools / JS Task Runners
-- [Browserify](http://browserify.org/) – Front End Package Manager
-- [RequireJS](http://requirejs.org/) – Front End Package Manager
+- [CoffeeScript](http://coffeescript.org/) – Languages
 - [Java](https://www.java.com) – Languages
-- [jQuery](http://jquery.com/) – Javascript UI Libraries
-- [MySQL](http://www.mysql.com) – Databases
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
 - [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
-- [CoffeeScript](http://coffeescript.org/) – Languages
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [Karma](http://karma-runner.github.io/) – Browser Testing
-- [QUnit](http://qunitjs.com/) – Javascript Testing Framework
-- [Chai](http://chaijs.com/) – Javascript Testing Framework
+- [jQuery](http://jquery.com/) – Javascript UI Libraries
 - [Hibernate](http://hibernate.org/) – Object Relational Mapper (ORM)
-- [PhantomJS](https://phantomjs.org/) – Headless Browsers
+- [MySQL](http://www.mysql.com) – Databases
+- [Browserify](http://browserify.org/) – Front End Package Manager
+- [Chai](http://chaijs.com/) – Javascript Testing Framework
+- [Coveralls](https://coveralls.io/) – Code Coverage
+- [Grunt](http://gruntjs.com/) – JS Build Tools / JS Task Runners
 - [JSHint](http://www.jshint.com/about/) – Code Review
 - [JUnit](http://junit.org/) – Testing Frameworks
-- [Lodash](https://lodash.com) – Javascript Utilities & Libraries
+- [Jasmine](http://jasmine.github.io/) – Javascript Testing Framework
+- [Karma](http://karma-runner.github.io/) – Browser Testing
 - [Log4j](https://logging.apache.org/log4j/2.x/) – Logging Tools
+- [Mocha](http://mochajs.org/) – Javascript Testing Framework
+- [PhantomJS](https://phantomjs.org/) – Headless Browsers
+- [QUnit](http://qunitjs.com/) – Javascript Testing Framework
+- [RequireJS](http://requirejs.org/) – Front End Package Manager
 - [SLF4J](http://slf4j.org/) – Log Management
-- [Font Awesome](https://fontawesome.com/) – Fonts
-- [Apache Camel](https://camel.apache.org/) – Platform as a Service
 - [SinonJS](http://sinonjs.org/) – Javascript Testing Framework
+- [Travis CI](http://travis-ci.com/) – Continuous Integration
+- [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
+- [Apache Camel](https://camel.apache.org/) – Platform as a Service
+- [Firefox](https://www.mozilla.org/en-US/firefox/) – Web Browser
+- [Font Awesome](https://fontawesome.com/) – Fonts
+- [Lodash](https://lodash.com) – Javascript Utilities & Libraries
 - [Moment.js](http://momentjs.com/) – Javascript Utilities & Libraries
 - [jsdoc](http://usejsdoc.org/) – Documentation as a Service & Tools
-- [Firefox](https://www.mozilla.org/en-US/firefox/) – Web Browser
-- [Travis CI](http://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 
@@ -43,37 +43,37 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 nvtam2105/cogivui is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/680/a43e4a04cb9f778842de43f95db59a14.png' alt='Coveralls'/> [Coveralls](https://coveralls.io/) – Code Coverage
-- <img width='25' height='25' src='https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png' alt='Jasmine'/> [Jasmine](http://jasmine.github.io/) – Javascript Testing Framework
-- <img width='25' height='25' src='https://img.stackshare.io/service/832/mocha.png' alt='Mocha'/> [Mocha](http://mochajs.org/) – Javascript Testing Framework
-- <img width='25' height='25' src='https://img.stackshare.io/service/844/iruTC031.png' alt='gulp'/> [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
-- <img width='25' height='25' src='https://img.stackshare.io/service/845/falgg2jybmhgk16y62lr.png' alt='Grunt'/> [Grunt](http://gruntjs.com/) – JS Build Tools / JS Task Runners
-- <img width='25' height='25' src='https://img.stackshare.io/service/849/9esmqty2.png' alt='Browserify'/> [Browserify](http://browserify.org/) – Front End Package Manager
-- <img width='25' height='25' src='https://img.stackshare.io/service/852/1781835.png' alt='RequireJS'/> [RequireJS](http://requirejs.org/) – Front End Package Manager
+- <img width='25' height='25' src='https://img.stackshare.io/service/1178/slQydAMv.png' alt='CoffeeScript'/> [CoffeeScript](http://coffeescript.org/) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/995/K85ZWV2F.png' alt='Java'/> [Java](https://www.java.com) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1025/logo-mysql-170x170.png' alt='MySQL'/> [MySQL](http://www.mysql.com) – Databases
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
 - <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1178/slQydAMv.png' alt='CoffeeScript'/> [CoffeeScript](http://coffeescript.org/) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1420/TidYGd6a.png' alt='Karma'/> [Karma](http://karma-runner.github.io/) – Browser Testing
-- <img width='25' height='25' src='https://img.stackshare.io/service/1421/b706f022230831a3d391db504a139e21.png' alt='QUnit'/> [QUnit](http://qunitjs.com/) – Javascript Testing Framework
-- <img width='25' height='25' src='https://img.stackshare.io/service/1725/chai.png' alt='Chai'/> [Chai](http://chaijs.com/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1756/1uNl_IZX.png' alt='Hibernate'/> [Hibernate](http://hibernate.org/) – Object Relational Mapper (ORM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1832/phantomjs.png' alt='PhantomJS'/> [PhantomJS](https://phantomjs.org/) – Headless Browsers
+- <img width='25' height='25' src='https://img.stackshare.io/service/1025/logo-mysql-170x170.png' alt='MySQL'/> [MySQL](http://www.mysql.com) – Databases
+- <img width='25' height='25' src='https://img.stackshare.io/service/849/9esmqty2.png' alt='Browserify'/> [Browserify](http://browserify.org/) – Front End Package Manager
+- <img width='25' height='25' src='https://img.stackshare.io/service/1725/chai.png' alt='Chai'/> [Chai](http://chaijs.com/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/680/a43e4a04cb9f778842de43f95db59a14.png' alt='Coveralls'/> [Coveralls](https://coveralls.io/) – Code Coverage
+- <img width='25' height='25' src='https://img.stackshare.io/service/845/falgg2jybmhgk16y62lr.png' alt='Grunt'/> [Grunt](http://gruntjs.com/) – JS Build Tools / JS Task Runners
 - <img width='25' height='25' src='https://img.stackshare.io/service/1945/mzh2bRes_400x400.png' alt='JSHint'/> [JSHint](http://www.jshint.com/about/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/2020/874086.png' alt='JUnit'/> [JUnit](http://junit.org/) – Testing Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/2438/lodash.png' alt='Lodash'/> [Lodash](https://lodash.com) – Javascript Utilities & Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png' alt='Jasmine'/> [Jasmine](http://jasmine.github.io/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/1420/TidYGd6a.png' alt='Karma'/> [Karma](http://karma-runner.github.io/) – Browser Testing
 - <img width='25' height='25' src='https://img.stackshare.io/service/2804/Coralogix-log4j-integration.jpg' alt='Log4j'/> [Log4j](https://logging.apache.org/log4j/2.x/) – Logging Tools
+- <img width='25' height='25' src='https://img.stackshare.io/service/832/mocha.png' alt='Mocha'/> [Mocha](http://mochajs.org/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/1832/phantomjs.png' alt='PhantomJS'/> [PhantomJS](https://phantomjs.org/) – Headless Browsers
+- <img width='25' height='25' src='https://img.stackshare.io/service/1421/b706f022230831a3d391db504a139e21.png' alt='QUnit'/> [QUnit](http://qunitjs.com/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/852/1781835.png' alt='RequireJS'/> [RequireJS](http://requirejs.org/) – Front End Package Manager
 - <img width='25' height='25' src='https://img.stackshare.io/service/2805/05518ecaa42841e834421e9d6987b04f_400x400.png' alt='SLF4J'/> [SLF4J](http://slf4j.org/) – Log Management
-- <img width='25' height='25' src='https://img.stackshare.io/service/3244/1_Mr1Fy00XjPGNf1Kkp_hWtw_2x.png' alt='Font Awesome'/> [Font Awesome](https://fontawesome.com/) – Fonts
-- <img width='25' height='25' src='https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg' alt='Apache Camel'/> [Apache Camel](https://camel.apache.org/) – Platform as a Service
 - <img width='25' height='25' src='https://img.stackshare.io/service/3509/logo.png' alt='SinonJS'/> [SinonJS](http://sinonjs.org/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](http://travis-ci.com/) – Continuous Integration
+- <img width='25' height='25' src='https://img.stackshare.io/service/844/iruTC031.png' alt='gulp'/> [gulp](http://gulpjs.com/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg' alt='Apache Camel'/> [Apache Camel](https://camel.apache.org/) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/8705/768px-Firefox_Logo__2017.svg.png' alt='Firefox'/> [Firefox](https://www.mozilla.org/en-US/firefox/) – Web Browser
+- <img width='25' height='25' src='https://img.stackshare.io/service/3244/1_Mr1Fy00XjPGNf1Kkp_hWtw_2x.png' alt='Font Awesome'/> [Font Awesome](https://fontawesome.com/) – Fonts
+- <img width='25' height='25' src='https://img.stackshare.io/service/2438/lodash.png' alt='Lodash'/> [Lodash](https://lodash.com) – Javascript Utilities & Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/3643/Xrtdc94q_400x400.png' alt='Moment.js'/> [Moment.js](http://momentjs.com/) – Javascript Utilities & Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/4047/js-doc.png' alt='jsdoc'/> [jsdoc](http://usejsdoc.org/) – Documentation as a Service & Tools
-- <img width='25' height='25' src='https://img.stackshare.io/service/8705/768px-Firefox_Logo__2017.svg.png' alt='Firefox'/> [Firefox](https://www.mozilla.org/en-US/firefox/) – Web Browser
-- <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](http://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 
@@ -84,7 +84,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [nvtam2105/cogivui](https://github.com/nvtam2105/cogivui)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|97<br/>Tools used|01/05/24 <br/>Report generated|
+|97<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
